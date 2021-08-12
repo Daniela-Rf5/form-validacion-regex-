@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>validacion formulario- expresiones regulares </title>
+</head>
+<body>
+<form>
+    <h1>Formulario Expresiones regulares</h1>
+    <div class="container-form">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" required/>
+
+        <label for="apellidos">Apellidos</label>
+        <input type="text" name="apellidos" id="apellidos" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,64}" required/>
+
+        <label for="dni">Numero de DNI</label>
+        <input type="dni" name="dni" id="dni" pattern="
+(([X-Z]{1})([-]?)(\d{7})([-]?)([A-Z]{1}))|((\d{8})([-]?)([A-Z]{1}))" required/>
+
+        <label for="telefono">Numero de telefono</label>
+        <input type="tel" name="telefono" id="telefono" pattern="(\+34|0034|34)?[ -]*(6|7)[ -]*([0-9][ -]*){8}" required/>
+
+        <label for="correo">Correo electronico</label>
+        <input type="email" name="correo" id="correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/>
+
+        <label for="direction">Direccion:</label>
+        <input type="text" id="direction" pattern="^([a-zA-Z-ú0-9, .#])+\d">
+
+    <div>
+        <input type="submit" id="button" title="Enviar">
+    </div>
+    </div>
+
+
+</form>
+</body>
+</html>
